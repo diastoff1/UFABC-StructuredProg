@@ -9,20 +9,23 @@ Saída:
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
     char phrase[100];
     int length = 0;
     int count = 1;
 
     fgets(phrase, 100, stdin);
-    printf("%s",phrase);
+    printf("%s", phrase);
 
-    while (phrase[length] != '\0'){
-        if (phrase[length] == ' ') count++;
+    while (phrase[length] != '\0')
+    {
+        if (phrase[length] == ' ')
+            count++;
         length++;
     };
-    
-    printf("%d",count);
+
+    printf("%d", count);
 
     return 0;
 }

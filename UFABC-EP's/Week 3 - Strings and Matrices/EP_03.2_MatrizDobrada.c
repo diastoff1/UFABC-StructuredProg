@@ -21,7 +21,7 @@ int main()
         { 
             int var;
             scanf("%d", &var);
-            m[n][n] = var;
+            m[i][j] = var;
         }
     }
 
@@ -41,12 +41,12 @@ int main()
         }
         else
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n/2; i++)
             {
                 int ind = n - 1;
-                for (int j = 0; j < n / 2; j++)
+                for (int j = 0; j < n/2; j++)
                 {
-                    m[i][j] += m[ind][j];
+                    m[j][i] += m[ind][i];
                     ind--;
                 }
             }
